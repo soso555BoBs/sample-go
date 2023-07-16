@@ -14,7 +14,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             TAG: ${{ github.sha }}
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/master' && github.event_name == 'merge'
         steps:
             - uses: actions/checkout@v2
             - name: Configure AWS credentials
