@@ -1,0 +1,35 @@
+{
+  "containerDefinitions": [
+    {
+      "command": [
+        "./test-go-app"
+      ],
+      "cpu": 333,
+      "essential": true,
+      "image": "863529286148.dkr.ecr.ap-northeast-1.amazonaws.com/sample-image:latest",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "sample-service",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "service"
+        }
+      },
+      "memoryReservation": 600,
+      "name": "sample-webapp",
+      "portMappings": [
+        {
+          "appProtocol": "",
+          "containerPort": 8080,
+          "hostPort": 0,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "family": "sample-service",
+  "ipcMode": "",
+  "networkMode": "bridge",
+  "pidMode": "",
+  "taskRoleArn": "arn:aws:iam::863529286148:role/sample_ecs_task_role"
+}
