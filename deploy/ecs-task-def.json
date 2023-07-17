@@ -28,7 +28,7 @@
     }
   ],
   "family": "sample-service",
-  "ipcMode": "",
+  "ipcMode": "task",
   "networkMode": "bridge",
   "pidMode": "task",
   "taskRoleArn": "arn:aws:iam::863529286148:role/sample_ecs_task_role"
