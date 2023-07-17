@@ -35,8 +35,8 @@ func TestRootHandler(t *testing.T) {
 	if err != nil {
 		t.Errorf("err: %v", err)
 	}
-	if body != "Hello, World!" {
-		t.Errorf("Expected %s, got %s", "Hello, World!", body)
+	if body != "Hello, World! Welcome Go App!" {
+		t.Errorf("Expected %s, got %s", "Hello, World! Welcome Go App!", body)
 	}
 }
 
